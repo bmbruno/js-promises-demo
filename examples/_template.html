@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Promises Demo</title>
+        <link href="styles/main.css" type="text/css" rel="stylesheet" />
+    </head>
+
+    <body>
+
+        <p>Some output may be in the browser console.</p>
+
+        <ul>
+            <li id="Resolved">Resolved</li>
+            <li id="Rejected">Rejected</li>
+        </ul>
+        
+        <script>
+
+            let test = new Promise((resolve, reject) => {
+
+                setTimeout(() => {
+
+                    let random = Math.random();
+
+                    if (random >= 0.5) {
+                        resolve("RESOLVED!");
+                    } else {
+                        reject("REJECTED!");
+                    }
+
+                }, 2000);
+
+            });
+
+            test.then(resolvedValue => {
+
+                document.getElementById("Resolved").innerHTML = resolvedValue;
+
+            },
+            rejectedValue => {
+
+                document.getElementById("Rejected").innerHTML = rejectedValue;
+
+            });
+
+        </script>
+
+
+    </body>
+</html>
