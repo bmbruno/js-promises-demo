@@ -31,3 +31,18 @@ html { overflow-y: scroll; }
 img { max-width: 100%; }
 a, a:visited { text-decoration: none; color: #600; -webkit-transition: all 0.15s ease-in-out; }
 strong { font-weight: bold; }
+
+/* THEME */
+
+body { font-family: 'Arial', sans-serif; font-size: 1em; background-color: rgb(207, 207, 207); }
+h1 { font-size: 2em; font-weight: bold; margin-bottom: 0.5em; }
+h2 { font-size: 1.5em; font-weight: bold; margin-bottom: 0.5em;  }
+
+header, .content { max-width: 900px; margin: 0 auto; }
+header { margin: 1em auto 0 auto; text-align: center; }
+.content { background-color: #fff; margin: 2em auto; padding: 2em; border-radius: 16px; box-shadow: 0 12px 32px rgb(0, 0, 0, 0.5); }
+
+.card { margin: 0 0 1em 0; background-color:rgba(233, 233, 233); padding: 1em; border-radius: 6px; }
+.card:last-of-type { margin-bottom: 0; }
+.card button { padding: 0.5em 2em; }
+.card p { margin: 1em 0 0 0; }
