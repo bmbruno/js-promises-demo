@@ -23,16 +23,36 @@
         let promiseThree = new Promise((resolve, reject) => { reject("Three rejected!"); });
         let promiseFour = new Promise((resolve) => { resolve("Four resolved!"); });
 
-        // Logging 'result.value' for 'fulfilled' promises only
-        Promise.allSettled([promiseOne, promiseTwo, promiseThree, promiseFour])
-            .then((result) => result.forEach((result) => { 
-                console.log(`Status: ${result.status} | Value: ${result.value}`) ;
-            }));
+        //
+        // Output the results (status, value, reason) of each settled promise
+        //
 
-        // Logging 'result.reason' for 'rejected' promises only
+        Promise.allSettled([promiseOne, promiseTwo, promiseThree, promiseFour])
+            .then( results => {
+
+                console.log("promiseOne result.status: " + results[0].status);
+                console.log("promiseOne result.value: " + results[0].value);
+
+                console.log("promiseTwo result.status: " + results[1].status);
+                console.log("promiseTwo result.value: " + results[1].value);
+
+                // 'promiseThree' was rejected, so we inspect the 'reason' instead of 'value'
+                console.log("promiseThree result.status: " + results[2].status);
+                console.log("promiseThree result.value: " + results[2].reason);
+
+                console.log("promiseFour result.status: " + results[3].status);
+                console.log("promiseFour result.value: " + results[3].value);
+
+            });
+
+        //
+        // Alternatively, use forEach to iterate over the results array
+        // 'promiseThree was rejected, so 'value' will be 'undefined'
+        //
+
         Promise.allSettled([promiseOne, promiseTwo, promiseThree, promiseFour])
         .then((result) => result.forEach((result) => { 
-            console.log(`Status: ${result.status} | Value: ${result.reason}`) ;
+            console.log(`Status: ${result.status} | Value: ${result.value}`) ;
         }));
 
     }
