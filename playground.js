@@ -55,3 +55,14 @@ let getAge = birthYear => { return (2022 - birthYear) };
 let response = await fetch("http://testdata.local/codemash.json");
 let data = await response.json();
 console.log(data);
+
+//
+// Promise.any()
+//
+
+let promiseOne = new Promise(/* resolve in 1500ms */);
+let promiseTwo = new Promise(/* resolve in 500ms */);
+let promiseThree = new Promise(/* reject immediately */);
+
+Promise.any([promiseOne, promiseTwo, promiseThree])
+    .then(result => console.log(result));
