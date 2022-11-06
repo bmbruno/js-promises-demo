@@ -66,3 +66,15 @@ let promiseThree = new Promise(/* reject immediately */);
 
 Promise.any([promiseOne, promiseTwo, promiseThree])
     .then(result => console.log(result));
+
+//
+// Promise.race()
+//
+
+let promiseOne = new Promise(/* resolve in 500ms */);
+let promiseTwo = new Promise(/* resolve in 1750ms */);
+let promiseThree = new Promise(/* reject immediately */);
+
+Promise.race([promiseOne, promiseTwo, promiseThree])
+.then(result => console.log(result))
+.catch(error => console.log(error));
