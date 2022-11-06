@@ -1,6 +1,6 @@
 (function () {
 
-    window.Demo.allSettled = function () {
+    window.Demo.race = function () {
 
         console.clear();
 
@@ -8,20 +8,47 @@
 
             Promise.race()
 
-            SHORT VERSION: settles the first promise that's fulfilled, whether it's rejected or resolved
+            Settles based on the first promise that's fulfilled, whether it's rejected or resolved.
+
+            You can change the setTimeout millisecond values to change the winner of the race.
 
         */
 
-        let promiseOne = new Promise((resolve) => { resolve("One resolved!"); });
-        let promiseTwo = new Promise((resolve) => { resolve("Two resolved!"); });
-        let promiseThree = new Promise((resolve, reject) => { reject("Three rejected!"); });
-        let promiseFour = new Promise((resolve) => { resolve("Four resolved!"); });
+        // This promise will fulfill first and win the race (250ms)
+        let promiseOne = new Promise((resolve) => { 
+
+            setTimeout(() => {
+                resolve("Promise One resolved!"); 
+            }, 250);
+            
+        });
+
+        // This promise will not fulfill in time (1000ms)
+        let promiseTwo = new Promise((resolve) => { 
+
+            setTimeout(() => {
+                resolve("Promise Two resolved!"); 
+            }, 1000);
+            
+        });
+
+        // This promise will not fulfill in time 500ms)
+        let promiseThree = new Promise((resolve, reject) => { 
+            
+            setTimeout(() => {
+                reject("Three rejected!");
+            }, 500);
+            
+        
+        });
 
         //
-        // Output the results (status, value, reason) of each settled promise
+        // Output the fulfilled value of the promise that won the race (promiseOne in this example)
         //
 
-        Promise.race([]);
+        Promise.race([promiseOne, promiseTwo, promiseThree])
+            .then(result => console.log(result))
+            .catch(error => console.log("REJECTED PROMISE: " + error));
 
     }
 

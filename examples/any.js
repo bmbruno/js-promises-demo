@@ -8,7 +8,8 @@
 
             Promise.any()
 
-            Given an array of promises, any() will return the first fulfilled promise.
+            Given an array of promises, any() will return the first fulfilled AND resolved promise.
+            Rejected promises are ignored.
 
         */
 
@@ -30,7 +31,7 @@
             
         });
 
-        // This will reject right away, but won't have any effect on any(), since it only cares about fulfilled promises
+        // This will reject right away, but won't have any effect on any(), since it only cares about resolved promises
         let promiseThree = new Promise((resolve, reject) => { reject("Three rejected!"); });
 
         //
