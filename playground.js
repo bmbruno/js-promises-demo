@@ -57,6 +57,17 @@ let data = await response.json();
 console.log(data);
 
 //
+// Promise.finally()
+//
+
+let promise = new Promise(/* resolve or reject */);
+
+promise
+    .then(resolvedValue => console.log(resolvedValue))
+    .catch(rejectedValue => console.log(rejectedValue))
+    .finally(() => console.log("This function will always run."));
+
+//
 // Promise.any()
 //
 
