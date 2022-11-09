@@ -8,7 +8,8 @@
 
             async / await
 
-            TEXT
+            'async' and 'await' provide a different syntax for working with promises; they primarily help solve
+            the problem of 'thenable hell' and long promise chains.
 
         */
 
@@ -19,9 +20,9 @@
             try {
 
                 // Control flow pauses here and lets this promise fulfil
-                let result = await longRunningFunction(8000);
+                let result = await longRunningFunction(6000);
 
-                // When the promise fulfils, execution continues
+                // When the promise fulfils, execution continues here
                 console.log(result);
 
             } catch (exception) {
@@ -52,6 +53,7 @@
         // Entry point
         GetData();
 
+        // Control flow resumes here while the promise waits to fulfill
         console.log("Program continues to run past the async function...");
 
     }
