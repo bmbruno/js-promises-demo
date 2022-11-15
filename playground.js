@@ -1,5 +1,5 @@
 //
-// Common examples of Promises being consumed
+// Common examples of Promises being consumed - this is NONFUNCTIONAL code
 //
 
 GetDataFromServer("https://example.com/api/getPerson")
