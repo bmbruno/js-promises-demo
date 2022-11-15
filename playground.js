@@ -47,6 +47,26 @@ sayFullName(firstName, lastName);
 // With name and body
 let getAge = birthYear => { return (2022 - birthYear) };
 
+//
+// Callback
+//
+
+function getData(url, callback) {
+
+    // Might take some time
+    let data = loadFromServer(url);
+
+    // Handle the result
+    callback(data);
+}
+
+function processResult(data) {
+
+    console.log("Status: " + data.status);
+    /* do something interesting */
+}
+
+getData("http://example.com/getdata", processResult);
 
 //
 // Fetch example
