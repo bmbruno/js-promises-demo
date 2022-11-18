@@ -7,8 +7,8 @@
     <body>
         
         <header>
-            <h1>JavaScript Promises Demoes</h1>
-            <p>See DevTools console for output of each demo.</p>
+            <h1>JavaScript Promises Examples</h1>
+            <p>See your browser's DevTools console for output of each demo.</p>
         </header>
 
         <div class="content">
@@ -16,31 +16,31 @@
             <div class="card">
                 <h2>promise.finally()</h2>
                 <button class="btn" onclick="window.Demo.finally();" >promise.finally()</button>
-                <p>An additional Promise that runs after all other promises have settled.</p>
+                <p>Returns a new promise that runs after all other promises have settled. This will always execute, much like the finally of a <em>try...catch...finally</em> block.</p>
             </div>
 
             <div class="card">
                 <h2>Promise.allSettled()</h2>
                 <button class="btn" onclick="window.Demo.allSettled();" >Promise.allSettled()</button>
-                <p>TEXT</p>
+                <p>Given an array of promises, once all have settled, allSettled() collects the <em>status</em> and <em>result</em> of each promise and returns them in a new promise.</p>
             </div>
 
             <div class="card">
                 <h2>Promise.any()</h2>
                 <button class="btn" onclick="window.Demo.any();" >Promise.any()</button>
-                <p>TEXT</p>
+                <p>Given an array of promises, any() will return the first fulfilled AND resolved promise. Rejected promises are ignored.</p>
             </div>
 
             <div class="card">
                 <h2>Promise.race()</h2>
                 <button class="btn" onclick="window.Demo.race();" >Promise.race()</button>
-                <p>TEXT</p>
+                <p>Returns a new promise with the result of the first promise that's fulfilled, whether it's resolved or rejected.</p>
             </div>
 
             <div class="card">
                 <h2>async / await</h2>
                 <button class="btn" onclick="window.Demo.asyncawait();" >async / await</button>
-                <p>TEXT</p>
+                <p>These keywords provide alternative syntax to writing thenables. Use of async/await create promises that read like synchronous procedural code.</p>
             </div>
 
         </div>

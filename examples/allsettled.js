@@ -8,7 +8,7 @@
 
             Promise.allSettled()
 
-            Given an array of Promises, allSettled() will return the values of each when all Promises have settled.
+            Given an array of promises, once all have settled, allSettled() collects the status and result of each promise and returns them in a new promise.
 
             The 'result' parameter populated by allSettled contains an array of objects, each with the following properties:
 
@@ -51,9 +51,9 @@
         //
 
         Promise.allSettled([promiseOne, promiseTwo, promiseThree, promiseFour])
-        .then((result) => result.forEach((result) => { 
-            console.log(`Status: ${result.status} | Value: ${result.value}`) ;
-        }));
+            .then((result) => result.forEach((result) => { 
+                console.log(`Status: ${result.status} | Value: ${result.value}`) ;
+            }));
 
     }
 

@@ -8,7 +8,7 @@
 
             Promise.race()
 
-            Settles based on the first promise that's fulfilled, whether it's rejected or resolved.
+            Returns a new promise with the result of the first promise that's fulfilled, whether it's resolved or rejected.
 
             You can change the setTimeout millisecond values to change the winner of the race.
 

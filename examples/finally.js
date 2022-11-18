@@ -8,7 +8,7 @@
 
             Promise.finally()
 
-            This demonstrates the use of a finally() method that executes after all other chained functions are called, regardless of their outcome.
+            Returns a new promise that runs after all other promises have settled. This will always execute, much like the finally of a try...catch...finally block.
 
         */
 

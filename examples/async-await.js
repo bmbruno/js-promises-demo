@@ -38,7 +38,7 @@
 
             return new Promise((resolve, reject) => {
 
-                console.log("longRunningFunction promise starting...");
+                console.log("longRunningFunction promise starting (wait a few seconds)...");
                 
                 setTimeout(() => {
 

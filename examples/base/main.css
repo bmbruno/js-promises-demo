@@ -37,6 +37,8 @@ strong { font-weight: bold; }
 body { font-family: 'Arial', sans-serif; font-size: 1em; background-color: rgb(207, 207, 207); }
 h1 { font-size: 2em; font-weight: bold; margin-bottom: 0.5em; }
 h2 { font-size: 1.5em; font-weight: bold; margin-bottom: 0.5em;  }
+em { font-style: italic; }
+p { line-height: 1.5em; }
 
 header, .content { max-width: 900px; margin: 0 auto; }
 header { margin: 1em auto 0 auto; text-align: center; }
@@ -44,5 +46,5 @@ header { margin: 1em auto 0 auto; text-align: center; }
 
 .card { margin: 0 0 1em 0; background-color:rgba(233, 233, 233); padding: 1em; border-radius: 6px; }
 .card:last-of-type { margin-bottom: 0; }
-.card button { padding: 0.5em 2em; }
+.card button { padding: 0.5em 2em; cursor: pointer; }
 .card p { margin: 1em 0 0 0; }
