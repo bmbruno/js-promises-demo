@@ -99,6 +99,24 @@ Promise.any([promiseOne, promiseTwo, promiseThree])
     .then(result => console.log(result));
 
 //
+// Promise.allSettled()
+//
+
+let promiseOne = new Promise((resolve) => { resolve("One resolved!"); });
+let promiseTwo = new Promise((reject) => { reject("Two rejected!"); });
+
+Promise.allSettled([promiseOne, promiseTwo, promiseThree, promiseFour])
+    .then( results => {
+
+        // Resolved promise has a VALUE 
+        console.log(results[0].status + " " + result[0].value);
+
+        // Rejected promise has a REASON
+        console.log(results[0].status + " " + result[0].reason);
+
+    });
+
+//
 // Promise.race()
 //
 
