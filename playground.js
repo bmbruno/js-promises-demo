@@ -127,3 +127,18 @@ let promiseThree = new Promise(/* reject immediately */);
 Promise.race([promiseOne, promiseTwo, promiseThree])
 .then(result => console.log(result))
 .catch(error => console.log(error));
+
+//
+// Promise States
+//
+
+Promise.PromiseState: "pending", "fulfilled", "rejected"
+Promise.PromiseResult: undefined
+
+//
+// The Promise object
+//
+
+Promise( function(resolve, reject) {} )
+
+Promise( (resolve, reject) => {} )
