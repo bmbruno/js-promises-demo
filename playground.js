@@ -17,22 +17,18 @@ async function LoadData(url) {
 }
 
 //
-// Sync vs async programming
+// Sync programming
 //
 
 let conference = "CodeMash";
 let year = "10000"
 console.log(`${conference} ${year}}`);
 
-function sayFullName(first, last) {
-    console.log(`${first} ${last}`);
-    return;
-}
 
-let firstName = "Jonathan";
-let lastName = "Archer";
+let url = "http://example.com/content";
+let content = GetContentFromServer(url);
+console.log(content);
 
-sayFullName(firstName, lastName);
 
 //
 // Arrow function expression example
