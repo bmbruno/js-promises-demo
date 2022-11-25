@@ -29,6 +29,13 @@ let url = "http://example.com/content";
 let content = GetContentFromServer(url);
 console.log(content);
 
+//
+// Async concept
+//
+
+let url = "http://example.com/content";
+let content = GetContentFromServer(url);
+console.log(content);
 
 //
 // Arrow function expression example
