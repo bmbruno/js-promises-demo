@@ -42,13 +42,58 @@ console.log(content);
 //
 
 // Simple function
-() => console.log(something);
+() => alert("Hello, world!");
 
 // With params
 (firstName, lastName) => alert(`${firstName} ${lastName}`);
 
 // With name and body
 let getAge = birthYear => { return (2022 - birthYear) };
+
+
+//
+// Top-level global objects
+//
+
+eval()
+isFinite()
+isNaN()
+parseFloat()
+parseInt()
+Object
+Function
+Number
+BigInt
+Math
+Date
+Array
+Int8Array
+Uint8Array
+Uint8ClampedArray
+Int16Array
+Uint16Array
+Int32Array
+Uint32Array
+Float32Array
+Float64Array
+BigInt64Array
+BigUint64Array
+Promise
+Generator
+GeneratorFunction
+AsyncFunction
+AsyncGenerator
+AsyncGeneratorFunction
+
+//
+// The Promise object (signature)
+//
+
+Promise( function )
+
+Promise( function(resolve, reject) { } )
+
+Promise( (resolve, reject) => { } )
 
 //
 // Callback
@@ -137,11 +182,3 @@ Promise.race([promiseOne, promiseTwo, promiseThree])
 
 Promise.PromiseState: "pending", "fulfilled", "rejected"
 Promise.PromiseResult: undefined
-
-//
-// The Promise object
-//
-
-Promise( function(resolve, reject) {} )
-
-Promise( (resolve, reject) => {} )
