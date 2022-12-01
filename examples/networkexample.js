@@ -1,6 +1,6 @@
 (function () {
 
-    window.Demo.fullExample = function () {
+    window.Demo.networkExample = function () {
 
         console.clear();
 
