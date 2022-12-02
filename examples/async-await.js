@@ -19,7 +19,7 @@
 
             try {
 
-                // Control flow pauses here and lets this promise fulfil
+                // Control flow pauses here and lets this promise settle
                 let result = await longRunningFunction(6000);
 
                 // When the promise fulfils, execution continues here
@@ -38,11 +38,11 @@
 
             return new Promise((resolve, reject) => {
 
-                console.log("longRunningFunction promise starting (wait a few seconds)...");
+                console.log("1) longRunningFunction promise starting (wait a few seconds)...");
                 
                 setTimeout(() => {
 
-                    resolve("longRunningFunction promise resolved.");
+                    resolve("2) longRunningFunction promise resolved.");
 
                 }, timeToRun);
             
@@ -54,7 +54,7 @@
         GetData();
 
         // Control flow resumes here while the promise waits to fulfill
-        console.log("Program continues to run past the async function...");
+        console.log("3) Program continues to run past the async function...");
 
     }
 
