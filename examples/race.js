@@ -50,7 +50,7 @@
             .then(result => console.log(result))
             .catch(error => console.log("REJECTED PROMISE: " + error));
 
-    }
+    };
 
 
 })();
