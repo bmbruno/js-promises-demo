@@ -14,26 +14,26 @@
         // Support functions
         //
 
-        function isPrime(num) {
-            for (var i = 2; i < num; i++)
-                if (num % i === 0) return false;
-            return num > 1;
-        }
+        // A largers 'baseNumber' value will significantly extend the time this fucntions takes
+        function DoLotsOfWork(baseNumber) {
 
-        function calculatePrimes(number) {
+            let startTime = performance.now();
 
-            let primes = [];
+            // Borrowed from: https://gist.github.com/sqren/5083d73f184acae0c5b7
+            let result = 0;	
+            for (var i = Math.pow(baseNumber, 7); i >= 0; i--) {		
+                result += Math.atan(i) * Math.tan(i);
+            };
 
-            for (let i = 2; i <= number; i++) {
-                if (isPrime(i))
-                    primes.push(i);
+            // Fake an occasional error (return negative status code)
+            if (Math.random() > 0.5) {
+                return -1;
             }
 
-            // Fake a random error
-            if (Math.random() > 0.5)
-                return -1;
+            let endTime = performance.now();
 
-            return primes;
+            // Return execution time to indicate success
+            return (endTime - startTime);
 
         };
 
@@ -44,18 +44,18 @@
         const myPromise = new Promise( ( resolve, reject ) => {
 
             // Start a long-running process
-            let result = calculatePrimes(1000000);
+            let result = DoLotsOfWork(11);
 
-            if (Array.isArray(result))
+            if (result > 0)
                 resolve(result);
             else
                 reject("Code: " + result);
         });
 
-        console.log("Calculating some prime numbers...");
+        console.log("Starting lots of work...");
 
         myPromise
-            .then(primes => console.log(primes))
+            .then(result => console.log(result))
             .catch(error => console.log("ERROR: " + error));
         
         console.log("Hanging out while that happens.");
