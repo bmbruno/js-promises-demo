@@ -8,11 +8,13 @@
 
             This example uses promises to demonstrate asynchronous JavaScript programming.
             The global fetch() function uses promises to make a resource request and parse the result.
+            
+            Fetch API: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 
         */
 
         //
-        // Async function that loads data from a server using fetch and returns JSON
+        // Async function that loads data from a server using fetch() and returns JSON
         //
 
         async function GetTrailData(url) {
