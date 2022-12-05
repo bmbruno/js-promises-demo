@@ -38,6 +38,27 @@ let content = GetContentFromServer(url);
 console.log(content);
 
 //
+// Callback
+//
+
+function getData(url, callback) {
+
+    // Might take some time
+    let data = loadFromServer(url);
+
+    // Handle the result
+    callback(data);
+}
+
+function processResult(data) {
+
+    console.log("Status: " + data.status);
+    /* do something interesting */
+}
+
+getData("http://example.com/getdata", processResult);
+
+//
 // Arrow function expression example
 //
 
@@ -49,7 +70,6 @@ console.log(content);
 
 // With name and body
 let getAge = birthYear => { return (2022 - birthYear) };
-
 
 //
 // Top-level global objects
@@ -95,26 +115,17 @@ Promise( function(resolve, reject) { } )
 
 Promise( (resolve, reject) => { } )
 
+
 //
-// Callback
+// Promise Thenables
 //
 
-function getData(url, callback) {
+myPromise.then( resolveFuction, rejectFunction );
 
-    // Might take some time
-    let data = loadFromServer(url);
+myPromise
+    .then( resolveFuction )
+    .catch ( rejectFunction );
 
-    // Handle the result
-    callback(data);
-}
-
-function processResult(data) {
-
-    console.log("Status: " + data.status);
-    /* do something interesting */
-}
-
-getData("http://example.com/getdata", processResult);
 
 //
 // Fetch example
