@@ -40,11 +40,11 @@ h2 { font-size: 1.5em; font-weight: bold; margin-bottom: 0.5em;  }
 em { font-style: italic; }
 p { line-height: 1.5em; }
 
-header, .content { max-width: 900px; margin: 0 auto; }
+header, .content { max-width: 700px; margin: 0 auto; }
 header { margin: 1em auto 0 auto; text-align: center; }
 .content { background-color: #fff; margin: 2em auto; padding: 2em; border-radius: 16px; box-shadow: 0 12px 32px rgb(0, 0, 0, 0.5); }
 
-.card { margin: 0 0 1em 0; background-color:rgba(233, 233, 233); padding: 1em; border-radius: 6px; }
+.card { margin: 0 0 1em 0; background-color: #dbdbdb; padding: 1em; border-radius: 6px; }
 .card:last-of-type { margin-bottom: 0; }
 .card button { padding: 0.5em 2em; cursor: pointer; }
 .card p { margin: 1em 0 0 0; }
