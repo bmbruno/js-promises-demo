@@ -1,5 +1,14 @@
+/*
+
+    This file contains code snippets used in the slide deck for "This is a Promise."
+    
+    Most of this code is out of context, incomplete, and non-functional as-is, although
+    some pieces may run in a browser console without much fuss.
+
+*/
+
 //
-// Common examples of Promises being consumed - this is NONFUNCTIONAL code
+// Common examples of Promises being consumed
 //
 
 GetDataFromServer("https://example.com/api/getPerson")
