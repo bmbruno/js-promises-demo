@@ -10,11 +10,11 @@
 
             Given an array of promises, once all have settled, allSettled() collects the status and result of each promise and returns them in a new promise.
 
-            The 'result' parameter populated by allSettled contains an array of objects, each with the following properties:
+            The 'result' parameter populated by allSettled() contains an array of objects, each with the following properties:
 
              * status: 'fulfilled' or 'rejected'
-             * value: if status == 'fulfilled', this is the value provided by the promise
-             * reason: if status == 'rejected', this is the value provided by the promise
+             * value: if status == 'fulfilled', this is the value returned by the promise
+             * reason: if status == 'rejected', this is the value returned by the promise
 
         */
 
@@ -47,16 +47,17 @@
 
         //
         // Alternatively, use forEach to iterate over the results array
-        // 'promiseThree was rejected, so 'value' will be 'undefined'
+        // 'promiseThree' was rejected, so 'value' will be 'undefined'
         //
 
         Promise.allSettled([promiseOne, promiseTwo, promiseThree, promiseFour])
-            .then((result) => result.forEach((result) => { 
+            .then((result) => result.forEach((result) => {
+
                 console.log(`Status: ${result.status} | Value: ${result.value}`) ;
+                
             }));
 
     }
 
 
 })();
-

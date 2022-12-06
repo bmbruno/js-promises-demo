@@ -8,13 +8,13 @@
 
             Promise.race()
 
-            Returns a new promise with the result of the first promise that's fulfilled, whether it's resolved or rejected.
+            Returns a new promise with the result of the first promise that's settled, whether it's resolved or rejected.
 
-            You can change the setTimeout millisecond values to change the winner of the race.
+            For this demo, you can change the setTimeout time values to change the winner of the race.
 
         */
 
-        // This promise will fulfill first and win the race (250ms)
+        // This promise will settle first and win the race (250ms)
         let promiseOne = new Promise((resolve) => { 
 
             setTimeout(() => {
@@ -23,7 +23,7 @@
             
         });
 
-        // This promise will not fulfill in time (1000ms)
+        // This promise will not settle in time (1000ms)
         let promiseTwo = new Promise((resolve) => { 
 
             setTimeout(() => {
@@ -32,7 +32,7 @@
             
         });
 
-        // This promise will not fulfill in time 500ms)
+        // This promise will not settle in time 500ms)
         let promiseThree = new Promise((resolve, reject) => { 
             
             setTimeout(() => {
@@ -43,7 +43,7 @@
         });
 
         //
-        // Output the fulfilled value of the promise that won the race (promiseOne in this example)
+        // Output the fulfilled or rejected value of the promise that settled first (promiseOne in this example)
         //
 
         Promise.race([promiseOne, promiseTwo, promiseThree])
@@ -54,4 +54,3 @@
 
 
 })();
-

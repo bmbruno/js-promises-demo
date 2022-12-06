@@ -8,8 +8,8 @@
 
             Promise.any()
 
-            Given an array of promises, any() will return the first fulfilled AND resolved promise.
-            Rejected promises are ignored.
+            Given an array of promises, any() will return a new promise with the result of the first fulfilled (resolved) promise.
+            If all promises of the array reject, then an AggregateError object of reasons will be returned.
 
         */
 
@@ -31,11 +31,11 @@
             
         });
 
-        // This will reject right away, but won't have any effect on any(), since it only cares about resolved promises
+        // This will reject right away, but won't have any effect on any()
         let promiseThree = new Promise((resolve, reject) => { reject("Three rejected!"); });
 
         //
-        // Output the results (status, value, reason) of each settled promise
+        // Output the results of each settled promise
         //
 
         Promise.any([promiseOne, promiseTwo, promiseThree])
@@ -46,4 +46,3 @@
 
 
 })();
-

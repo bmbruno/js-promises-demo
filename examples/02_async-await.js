@@ -14,7 +14,7 @@
         */
 
         // 'async' tells the interpreter to not wait for this function - it can continue executing 
-        // the rest of the program while this function does its thing
+        // the rest of the program while this function does its thing asynchronously
         async function GetData() {
 
             try {
@@ -22,7 +22,7 @@
                 // Control flow pauses here and lets this promise settle
                 let result = await longRunningFunction(6000);
 
-                // When the promise fulfils, execution continues here
+                // When the promise fulfills (resolves), execution continues here
                 console.log(result);
 
             } catch (exception) {
@@ -59,4 +59,3 @@
     }
 
 })();
-

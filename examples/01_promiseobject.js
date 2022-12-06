@@ -6,7 +6,18 @@
 
         /*
 
+            The Promise object
+
             This demonstrates how to write and use the Promise object.
+
+            The Promise object accepts a single parameter: a function that itself takes two parameters:
+
+                * resolve - a function to call when the promise succeeds
+                * reject - a function to call when the promise fails
+            
+            The full signature for the promise object looks like:
+
+                Promise( function ( resolveFunctions, rejectFunction ) )
 
         */
 
@@ -25,7 +36,6 @@
         // Create a new Promise 
         //
 
-        // The Promise() object takes a function with two params: resolve, reject
         let myPromise = new Promise( ( resolve, reject ) => {
 
             // Start a process without a definitive completion time
@@ -56,4 +66,3 @@
 
 
 })();
-

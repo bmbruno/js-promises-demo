@@ -46,13 +46,13 @@
             <div class="card">
                 <h2>Promise.any()</h2>
                 <button class="btn" onclick="window.Demo.any();" >Promise.any()</button>
-                <p>Given an array of promises, any() will return the first fulfilled AND resolved promise. Rejected promises are ignored.</p>
+                <p>Given an array of promises, any() will return a new promise with the result of the first fulfilled (resolved) promise. If <em>all</em> promises of the array reject, then an AggregateError object of reasons will be returned.</p>
             </div>
 
             <div class="card">
                 <h2>Promise.race()</h2>
                 <button class="btn" onclick="window.Demo.race();" >Promise.race()</button>
-                <p>Returns a new promise with the result of the first promise that's fulfilled, whether it's resolved or rejected.</p>
+                <p>Returns a new promise with the result of the first promise that's settled, whether it's resolved or rejected.</p>
             </div>
 
 
@@ -60,13 +60,14 @@
         </div>
         
         <script src="examples/base/demo.js"></script>
-        <script src="examples/finally.js"></script>
-        <script src="examples/allsettled.js"></script>
-        <script src="examples/any.js"></script>
-        <script src="examples/race.js"></script>
-        <script src="examples/async-await.js"></script>
-        <script src="examples/promiseobject.js"></script>
-        <script src="examples/networkexample.js"></script>
-
+        
+        <script src="examples/01_promiseobject.js"></script>
+        <script src="examples/02_async-await.js"></script>
+        <script src="examples/03_networkexample.js"></script>
+        <script src="examples/04_finally.js"></script>
+        <script src="examples/05_allsettled.js"></script>
+        <script src="examples/06_any.js"></script>
+        <script src="examples/07_race.js"></script>
+    
     </body>
 </html>
