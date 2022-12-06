@@ -38,6 +38,22 @@ let content = GetContentFromServer(url);
 console.log(content);
 
 //
+// Existing asynchronous code
+//
+
+setTimeout(function helloWorld() {
+
+    console.alert("Hello, CodeMash 10000!");
+
+}, 1500);
+
+setInterval(function annoyUser() {
+
+    showStupidEmailSignUp();
+
+}, 15000);
+
+//
 // Callback
 //
 
