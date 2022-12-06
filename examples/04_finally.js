@@ -14,7 +14,7 @@
 
         let promise = new Promise((resolve, reject) => {
 
-            if (true) {
+            if (Math.random() > 0.5) {
                 resolve("RESOLVED!");
             } else {
                 reject("REJECTED!");
