@@ -218,3 +218,23 @@ Promise.race([promiseOne, promiseTwo, promiseThree])
 
 Promise.PromiseState: "pending", "fulfilled", "rejected"
 Promise.PromiseResult: undefined
+
+//
+// Callback hell
+//
+
+startEngine(args, function() {
+  getATIS(args, function() {
+    callTower(args, function() {
+      doRunup(args, function() {
+        lineupCenterline(args, function() {
+          setTakeoffPower(args, function() {
+            findRotateSpeed(args, function() {
+              fly();
+            });
+          });
+        });
+      });
+    });
+  });
+});
