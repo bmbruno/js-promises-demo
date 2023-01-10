@@ -45,7 +45,7 @@
             // We determine what is considered a success or failure
             // This could be anything; for example, if HTTP 200 was returned from a network call
             if (result == 200)
-                resolve(result);
+                resolve("HTTP " + result);
             else
                 reject("HTTP " + result);
         });
