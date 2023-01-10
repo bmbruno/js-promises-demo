@@ -9,7 +9,7 @@
             The Promise object
 
             This demonstrates how to write and use the Promise object.
-
+            
             The Promise object accepts a single parameter: a function that itself takes two parameters:
 
                 * resolve - a function to call when the promise succeeds
@@ -17,7 +17,7 @@
             
             The full signature for the promise object looks like:
 
-                Promise( function ( resolveFunctions, rejectFunction ) )
+                Promise( function ( resolveFunction, rejectFunction ) )
 
         */
 
