@@ -12,4 +12,10 @@ To use this:
 
 These example correspond to my presentation **This is a Promise That You'll Understand Asynchronous Programming with JavaScript**.
 
+## Live Demo
+
+* https://www.brandonbruno.com/sites/code/jspromise
+
+## Contact Info
+
 For questions, reach out to me on Twitter: [@BrandonMBruno](https://twitter.com/BrandonMBruno)
