@@ -42,7 +42,7 @@
                 
                 setTimeout(() => {
 
-                    resolve("2) longRunningFunction promise resolved.");
+                    resolve("3) longRunningFunction promise resolved.");
 
                 }, timeToRun);
             
@@ -54,7 +54,7 @@
         GetData();
 
         // Control flow resumes here while the promise waits to fulfill
-        console.log("3) Program continues to run past the async function...");
+        console.log("2) Program continues to run past the async function...");
 
     }
 
