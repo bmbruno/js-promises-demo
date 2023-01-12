@@ -1,4 +1,4 @@
-# Learning JavaScript Promises by Example
+# JavaScript Promises by Example
 
 This repo features several working examples of JavaScript Promises and composition functions of the Promise object.
 
