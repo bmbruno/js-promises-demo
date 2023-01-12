@@ -10,7 +10,7 @@ To use this:
 4) Click on an example's button to execute it
     * observe the results in your browser console
 
-These example correspond to my presentation **This is a Promise That You'll Understand Asynchronous Programming with JavaScript**.
+These examples correspond to my presentation **This is a Promise That You'll Understand Asynchronous Programming with JavaScript**.
 
 ## Live Demo
 
