@@ -16,6 +16,12 @@ These examples correspond to my presentation **This is a Promise That You'll Und
 
 * https://www.brandonbruno.com/sites/code/jspromise
 
+## Presentations
+
+Links to my presentation _This is a Promise That You'll Understand Asynchronous Programming with JavaScript_, as presented at various conferences:
+
+* [http://brandonbruno.com/sites/speaking/ThisIsAPromise_KCDC2023.pdf](Kansas City Developer Conference (2023, PDF))
+
 ## Contact Info
 
 For questions, reach out to me on Twitter: [@BrandonMBruno](https://twitter.com/BrandonMBruno)
