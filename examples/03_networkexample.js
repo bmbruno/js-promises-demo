@@ -24,7 +24,7 @@
 
             // Each line with 'await' will pause and wait for the promise function to settle
             let result = await fetch(url, { mode: 'cors' });
-            let jsonData = result.json();
+            let jsonData = await result.json();
             return jsonData;
 
         }
