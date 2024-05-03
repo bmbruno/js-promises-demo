@@ -238,3 +238,24 @@ startEngine(args, function() {
     });
   });
 });
+
+//
+// Promise with inline resolve/reject functions (not a great pattern)
+//
+
+new Promise( function (
+
+  resolve = () => { console.log("RESOLVED :-)"); },
+  reject = () => { console.log("REJECTED :-("); }
+
+) {
+
+  let result = DoLotsOfWork();
+
+  if (result.status == 200) {
+    resolve();
+  } else {
+    reject();
+  }
+
+});
