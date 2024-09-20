@@ -27,4 +27,4 @@ Links to my presentation _This is a Promise That You'll Understand Asynchronous 
 
 ## Contact Info
 
-For questions, reach out to me on Twitter: [@BrandonMBruno](https://twitter.com/BrandonMBruno)
+For questions, reach out to me on LinkedIn: [/in/brandonbruno](https://www.linkedin.com/in/brandonbruno)
