@@ -20,6 +20,7 @@ These examples correspond to my presentation **This is a Promise That You'll Und
 
 Links to my presentation _This is a Promise That You'll Understand Asynchronous Programming with JavaScript_, as presented at various conferences:
 
+* [Gem City TECH Mini Conf (2025, PDF)](http://www.brandonbruno.com/sites/speaking/ThisIsAPromise_GemCityTech_2025.pdf)
 * [Atlanta Developer's Conference (2024, PDF)](https://www.brandonbruno.com/sites/speaking/ThisIsAPromise_ATLDevCon2024.pdf)
 * [Stir Trek Conference (2024, PDF)](https://www.brandonbruno.com/sites/speaking/ThisIsAPromise_StirTrek2024.pdf)
 * [Momentum Developer Conference (2023, PDF)](https://www.brandonbruno.com/sites/speaking/ThisIsAPromise_Momentum2023.pdf)
